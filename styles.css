@@ -13,11 +13,13 @@ nav {
   top: 0;
   left: 0;
   background-color: white; /* optional background */
+  z-index: 10;
 }
 .about-container-right p {
   gap: 100px;
   font-size: 20px;
 }
+
 .nav-container {
   padding-top: 15px;
   width: 75%;
@@ -72,6 +74,16 @@ nav ul {
   border-radius: 30px;
   object-fit: cover;
   object-position: center 20%;
+  animation: fade 1.5s ease-in-out 1 forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0; /* start transparent */
+  }
+  100% {
+    opacity: 1; /* end visible */
+  }
 }
 .about-container {
   display: flex;
